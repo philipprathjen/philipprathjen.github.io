@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/full-width-pics.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,16 +40,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Philipp Rathjen's Site</a>
+                <a class="navbar-brand" style="color:black" href="#">Philipp's Site</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="https://www.linkedin.com/in/philipp-rathjen-6b369439">About</a>
+                        <!-- <a href="https://www.linkedin.com/in/philipp-rathjen-6b369439">About</a> -->
                     </li>
                     <li>
-                        <a href="https://philipprathjen.github.io/masterthesis">Master Thesis</a>
+                        <!-- <a href="https://philipprathjen.github.io/masterthesis">Master Thesis</a> -->
                     </li>
                 </ul>
             </div>
@@ -57,28 +58,44 @@
         <!-- /.container -->
     </nav>
 
+
     <!-- Full Width Image Header with Logo -->
     <!-- Image backgrounds are set within the full-width-pics.css file. -->
-    <header class="image-bg-fluid-height">
-        <img class="img-responsive img-center" src="" alt="">
-    </header>
+    <div>
+       <img class="img-responsive" src="http://amerindia.travel/wp-content/uploads/2015/06/Popocateptl-Mexico-Amerindia-Travel.jpg" alt=""> 
+    </div>
+        
 
     <!-- Content Section -->
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="section-heading">Welcome to Philipp's site</h1>
-                    <p class="lead section-lead">Plenty of diverse projects, from very different areas.</p>
-                    <p class="section-paragraph">If you find anything interesting feel free to ask me anything.</p>
+                    <center>
+                        <h1 class="section-heading" id="project-title">Explore.</h1>
+                    </center>
                 </div>
             </div>
         </div>
     </section>
+    <section>
+    <center>
+      <div id='tilebox'>
+             <a href="https://philipprathjen.github.io/masterthesis"><div class="button1" id='master'>M</div></a>
+             <a href="http://jamiifarms.com"><div class="button1" id='jamii'>J</div></a>
+             <a href="http://www.cdtm.de/blog/"><div class="button1" id='cdtm'>C</div></a>
+             <a href=""><div class="button1" id='motius'>M</div></a>
+             <div class="button1" id='wedding'>W</div>
+             <div class="button1" id='button1'>L</div>
+       </div>
+    </center>
+
+
+
+    </section>
 
     <!-- Fixed Height Image Aside -->
     <!-- Image backgrounds are set within the full-width-pics.css file. -->
-    <aside class="image-bg-fixed-height"></aside>
 
 
     <!-- Footer -->
@@ -99,6 +116,56 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        $('#master').hover(
+            function() {
+                var $this = $('#project-title'); // caching $(this)
+                $this.data('initialText', $this.text());
+                $this.text("Masterarbeit");
+            },
+            function() {
+                var $this = $('#project-title'); // caching $(this)
+                $this.text($this.data('initialText'));
+            }
+        );
+        $('#jamii').hover(
+            function() {
+                var $this = $('#project-title'); // caching $(this)
+                $this.data('initialText', $this.text());
+                $this.text("Jamii Farms");
+            },
+            function() {
+                var $this = $('#project-title'); // caching $(this)
+                $this.text($this.data('initialText'));
+            }
+        );
+        $('#cdtm').hover(
+            function() {
+                var $this = $('#project-title'); // caching $(this)
+                $this.data('initialText', $this.text());
+                $this.text("CDTM");
+            },
+            function() {
+                var $this = $('#project-title'); // caching $(this)
+                $this.text($this.data('initialText'));
+            }
+        );
+        $('#wedding').hover(
+            function() {
+                var $this = $('#project-title'); // caching $(this)
+                $this.data('initialText', $this.text());
+                $this.text("Wedding");
+            },
+            function() {
+                var $this = $('#project-title'); // caching $(this)
+                $this.text($this.data('initialText'));
+            }
+        );
+    });
+    </script>
 
 </body>
 
