@@ -58,11 +58,11 @@
              <a href="http://jamiifarms.com"><div class="button1" id='jamii'>J</div></a>
              <a href="http://www.cdtm.de/blog/"><div class="button1" id='cdtm'>C</div></a>
              <a href="https://www.motius.de/blog/en/"><div class="button1" id='motius'>M</div></a>
-             <div class="button1" id='button1'>W</div>
+             <a href="https://lauraandphilipp.com/"><div class="button1" id='wedding'>W</div>
              <div class="button1" id='button1'>L</div>
              <div class="button1" id='button1'>A</div>
              <div class="button1" id='button1'>I</div>
-             <a href="https://eurbaninsight.wordpress.com/"><div class="button1" id='eurban'>E</div></a>
+             <a href="https://eurbaninsight.wordpress.com/"><div class="button1" id='eurban'>B</div></a>
        </div>
     </center>
 
@@ -144,7 +144,7 @@
             function() {
                 var $this = $('#project-title'); // caching $(this)
                 $this.data('initialText', $this.text());
-                $this.text("EURBAN Insight");
+                $this.text("Blog");
             },
             function() {
                 var $this = $('#project-title'); // caching $(this)
@@ -156,6 +156,17 @@
                 var $this = $('#project-title'); // caching $(this)
                 $this.data('initialText', $this.text());
                 $this.text("Motius");
+            },
+            function() {
+                var $this = $('#project-title'); // caching $(this)
+                $this.text($this.data('initialText'));
+            }
+        );
+        $('#wedding').hover(
+            function() {
+                var $this = $('#project-title'); // caching $(this)
+                $this.data('initialText', $this.text());
+                $this.text("Wedding Site");
             },
             function() {
                 var $this = $('#project-title'); // caching $(this)
